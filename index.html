@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+    <link rel="icon" href="...">
+    
+    <!-- font awesome 6.4.0 -->
+        <link rel="stylesheet" href="vendor/fontawesome/font_awesome.css">
+
+    <!-- bootstrap 5.3.0 -->
+        <link rel="stylesheet" href="vendor/bootstrap/bootstrap.min.css">
+    
+    <!-- custome css -->
+        <link rel="stylesheet" href="assets/css/main.css">
+        <link rel="stylesheet" href="assets/css/media.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1>Course Crud</h1>
+        <form action="" class="mb-5">
+            <div class="mb-3">
+                <label for="courseName">course name<span class="text-danger"> *</span></label>
+                <input class="form-control input" type="text" name="courseName" id="courseName" placeholder="course name">
+                <span class="validation text-danger d-none">*please start with capital letter and name must be between 3 and 10 chars</span>
+            </div>
+            <div class="mb-3">
+                <label for="courseCategory">course category</label>
+                <input class="form-control input" type="text" name="courseCategory" id="courseCategory" placeholder="course category">
+                <span class="validation text-danger d-none">*please start with capital letter and category must be between 3 and 20 chars</span>
+            </div>
+            <div class="mb-3">
+                <label for="coursePrice">course price</label>
+                <input class="form-control input" type="number" name="coursePrice" id="coursePrice" placeholder="course price">
+                <span class="validation text-danger d-none">*price must be between 100 - 9999</span>
+            </div>
+            <div class="mb-3">
+                <label for="courseDescription">course description</label>
+                <textarea class="form-control input" name="courseDescription" id="courseDescription" cols="30" rows="2" placeholder="course description"></textarea>
+                <span class="validation text-danger d-none">*please start with capital letter and name must be more than 3 chars</span>
+            </div>
+            <div class="mb-3">
+                <label for="courseCapacity">course capacity</label>
+                <input class="form-control input" type="number" name="courseCapacity" id="courseCapacity" placeholder="course capacity">
+                <span class="validation text-danger d-none">*capacity must be between 10 - 200</span>
+            </div>
+            <div class="mb-3">
+                <input type="submit" name="addCourse" id="addCourse" value="Add Course" class="btn btn-outline-secondary me-3" disabled>
+                <button class="btn btn-outline-secondary" name="clear" id="clear">Clear</button>
+            </div>
+           <input type="text" name="search" id="search" placeholder="search..." class="form-control mb-3">
+           <button class="btn btn-outline-danger" name="deleteAll" id="deleteAll" disabled>Delete All</button> 
+        </form>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>name</th>
+                    <th>category</th>
+                    <th>price</th>
+                    <th>description</th>
+                    <th>capacity</th>
+                    <th>update</th>
+                    <th>delete</th>
+                </tr>
+            </thead>
+            <tbody id="tbody">
+            </tbody>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- bootstrap 5.3.0 -->
+        <script src="vendor/bootstrap/bootstrap.bundle.min.js"></script>
+
+    <script src="assets/js/index.js"></script>
+</body>
+</html>
